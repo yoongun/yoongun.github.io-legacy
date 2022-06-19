@@ -1,12 +1,15 @@
+body {
+  font-family: "Nanum Myeongjo", serif;
+}
 #canvas {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-.line {
-  width: 112px;
-  height: 47px;
-  border-bottom: 1px solid black;
+#rightsreserved {
   position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
 }
