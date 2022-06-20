@@ -58,13 +58,13 @@ O1 = new Letter([
   new Line(new Pos(125, 275), new Pos(125, 75), new Pos(0, 25)),
   new Line(new Pos(-100, 75), new Pos(125, 75), new Pos(25, 0)),
   new Line(new Pos(150, -350), new Pos(150, 75), new Pos(0, 25)),
-  new Line(new Pos(650, 100), new Pos(125, 100), new Pos(25, 0)),
+  new Line(new Pos(700, 100), new Pos(125, 100), new Pos(25, 0)),
 ]);
 O2 = new Letter([
   new Line(new Pos(175, 750), new Pos(175, 75), new Pos(0, 25)),
-  new Line(new Pos(650, 75), new Pos(175, 75), new Pos(25, 0)),
+  new Line(new Pos(750, 75), new Pos(175, 75), new Pos(25, 0)),
   new Line(new Pos(200, -125), new Pos(200, 75), new Pos(0, 25)),
-  new Line(new Pos(-50, 100), new Pos(175, 100), new Pos(25, 0)),
+  new Line(new Pos(-100, 100), new Pos(175, 100), new Pos(25, 0)),
 ]);
 N1 = new Letter([
   new Line(new Pos(225, -500), new Pos(225, 75), new Pos(0, 25)),
@@ -74,7 +74,7 @@ N1 = new Letter([
 G = new Letter([
   new Line(new Pos(275, -250), new Pos(275, 75), new Pos(0, 25)),
   new Line(new Pos(100, 400), new Pos(300, 75), new Pos(-25, 50)),
-  new Line(new Pos(-50, 75), new Pos(275, 75), new Pos(25, 0)),
+  new Line(new Pos(-500, 75), new Pos(275, 75), new Pos(25, 0)),
 ]);
 U = new Letter([
   new Line(new Pos(325, -100), new Pos(325, 75), new Pos(0, 25)),
@@ -110,11 +110,11 @@ function loop() {
   var now = time.getTime();
 
   phase = (Math.cos(((now - start) / 3000) * Math.PI) + 1) / 2;
-  phase /= 0.9;
+  phase /= 0.85;
   phase = Math.min(phase, 1);
 
   for (var i = 0; i < letters.length; i++) {
-    letters[letters.length - i - 1].draw(Math.min(phase + i / 100, 1));
+    letters[letters.length - i - 1].draw(Math.min(phase + i / 80, 1));
   }
 
   requestAnimationFrame(loop);
