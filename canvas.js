@@ -109,9 +109,11 @@ function loop() {
   let time = new Date();
   var now = time.getTime();
 
-  phase = (Math.cos(((now - start) / 3000) * Math.PI) + 1) / 2;
-  phase /= 0.85;
-  phase = Math.min(phase, 1);
+  // phase = (Math.cos(((now - start) / 3000) * Math.PI) + 1) / 2;
+  // phase /= 0.85;
+  // phase = Math.min(phase, 1);
+
+  phase = (Math.tanh(((now - start) / 1500) * Math.PI - Math.PI) + 1) / 2;
 
   for (var i = 0; i < letters.length; i++) {
     letters[letters.length - i - 1].draw(Math.min(phase + i / 80, 1));
