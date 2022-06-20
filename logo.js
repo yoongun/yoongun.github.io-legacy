@@ -1,8 +1,8 @@
-var canvas = document.getElementById("canvas");
+var canvas = document.getElementById("logo");
 var c = canvas.getContext("2d");
 
 c.strokeStyle = "Black";
-c.lineWidth = 10;
+c.lineWidth = 2;
 c.lineCap = "round";
 
 function easeInOutQuint(x) {

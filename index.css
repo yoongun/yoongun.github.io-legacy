@@ -1,15 +1,57 @@
 body {
   font-family: "Nanum Myeongjo", serif;
 }
-#canvas {
+
+html {
+  font-size: 100%;
+}
+
+#logo {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
+nav {
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 8rem;
+}
+
+nav li a {
+  text-decoration: none;
+  color: #333;
+}
+nav li a:hover {
+  text-decoration: none;
+  color: #777;
+}
+
+nav li:first-child {
+  margin-left: 0;
+}
+
+.section {
+  width: 50em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.link {
+  text-decoration: none;
+  color: #333;
+}
+
+.link:hover {
+  color: #777;
+}
+
 #rightsreserved {
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   width: 100%;
   text-align: center;
 }
