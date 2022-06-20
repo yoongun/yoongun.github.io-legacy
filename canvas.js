@@ -58,11 +58,11 @@ O1 = new Letter([
   new Line(new Pos(125, 275), new Pos(125, 75), new Pos(0, 25)),
   new Line(new Pos(-100, 75), new Pos(125, 75), new Pos(25, 0)),
   new Line(new Pos(150, -350), new Pos(150, 75), new Pos(0, 25)),
-  new Line(new Pos(625, 100), new Pos(125, 100), new Pos(25, 0)),
+  new Line(new Pos(650, 100), new Pos(125, 100), new Pos(25, 0)),
 ]);
 O2 = new Letter([
   new Line(new Pos(175, 750), new Pos(175, 75), new Pos(0, 25)),
-  new Line(new Pos(625, 75), new Pos(175, 75), new Pos(25, 0)),
+  new Line(new Pos(650, 75), new Pos(175, 75), new Pos(25, 0)),
   new Line(new Pos(200, -125), new Pos(200, 75), new Pos(0, 25)),
   new Line(new Pos(-50, 100), new Pos(175, 100), new Pos(25, 0)),
 ]);
@@ -99,7 +99,7 @@ R = new Letter([
   new Line(new Pos(525, -50), new Pos(525, 75), new Pos(0, 25)),
 ]);
 
-lines = [Y, O1, O2, N1, G, U, N2, Dot, K, R];
+letters = [Y, O1, O2, N1, G, U, N2, Dot, K, R];
 
 let time = new Date();
 let start = time.getTime();
@@ -110,13 +110,12 @@ function loop() {
   var now = time.getTime();
 
   phase = (Math.cos(((now - start) / 3000) * Math.PI) + 1) / 2;
-  phase /= 0.95;
+  phase /= 0.9;
   phase = Math.min(phase, 1);
-  console.log(phase);
 
-  lines.forEach((line) => {
-    line.draw(phase);
-  });
+  for (var i = 0; i < letters.length; i++) {
+    letters[letters.length - i - 1].draw(Math.min(phase + i / 100, 1));
+  }
 
   requestAnimationFrame(loop);
 }
