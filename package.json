@@ -1,0 +1,23 @@
+{
+  "name": "yoongun.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "compile:sass": "node-sass index.scss index.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoongun/yoongun.github.io.git"
+  },
+  "author": "YOON GUN",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/yoongun/yoongun.github.io/issues"
+  },
+  "homepage": "https://github.com/yoongun/yoongun.github.io#readme",
+  "private": true,
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
